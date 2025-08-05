@@ -1,0 +1,14 @@
+auto-pr-reviewer-ai/
+├── app/
+│   ├── main.py
+│   ├── github_client.py
+│   ├── reviewer.py
+│   └── config.py
+├── requirements.txt
+├── Dockerfile
+├── .env.example
+├── .gitignore
+├── README.md
+└── .github/
+    └── workflows/
+        └── review.yml
