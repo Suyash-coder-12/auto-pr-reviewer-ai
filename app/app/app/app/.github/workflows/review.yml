@@ -1,0 +1,15 @@
+name: AI Code Review
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call AI Reviewer
+        run: |
+          curl -X POST http://your-deployed-api.com/review/ \
+            -H "Content-Type: application/json" \
+            -d '{"repo": "${{ github.repository }}", "pr_number": ${{ github.event.pull_request.number }}}'
